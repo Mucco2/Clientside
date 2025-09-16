@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McDonald's Bestillingsstander</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="info-box">
+            <h2>Bestillingsnummer: <span id="order-number">1</span></h2>
+        </div>
+        <div class="info-box">
+            <h2>Dagens Omsætning: <span id="daily-revenue">0.00</span> kr.</h2>
+        </div>
+    </header>
+
+    <main>
+        <div class="menu-container">
+            <h1>Bestilling Trin for Trin</h1>
+
+            <div id="step-1" class="step active-step">
+                <section class="category">
+                    <h2>Vælg Hovedret</h2>
+                    <div class="menu-items">
+                        <div class="menu-item" data-name="Big Mac" data-price="45.00">
+                            <img src="https://s7d1.scene7.com/is/image/mcdonalds/big-mac-1:product-header-desktop?wid=829&hei=455&dpr=off" alt="Big Mac">
+                            <h3>Big Mac</h3><p>45.00 kr.</p><button class="add-to-cart">Tilføj</button>
+                        </div>
+                        <div class="menu-item" data-name="McFeast" data-price="42.00">
+                            <img src="https://www.mcdonalds.com/is/image/content/dam/se/nutrition/nfl-product/product/related-products/McFeast.png" alt="McFeast">
+                            <h3>McFeast</h3><p>42.00 kr.</p><button class="add-to-cart">Tilføj</button>
+                        </div>
+                    </div>
+                </section>
+                <div class="step-nav">
+                    <button class="next-step">Næste: Tilbehør</button>
+                </div>
+            </div>
+
+            <div id="step-2" class="step">
+                 <section class="category">
+                    <h2>Vælg Tilbehør</h2>
+                    <div class="menu-items">
+                        <div class="menu-item" data-name="Pommes Frites" data-price="25.00">
+                            <img src="https://www.mcdonalds.com/is/image/content/dam/dk/nutrition/nfl-product/product/products/Side_Fries_Medium_1200x1200.png" alt="Pommes Frites">
+                            <h3>Pommes Frites</h3><p>25.00 kr.</p><button class="add-to-cart">Tilføj</button>
+                        </div>
+                    </div>
+                </section>
+                <div class="step-nav">
+                    <button class="prev-step">Tilbage</button>
+                    <button class="next-step skip-step">Spring Over</button>
+                    <button class="next-step">Næste: Drikkevarer</button>
+                </div>
+            </div>
+
+            <div id="step-3" class="step">
+                <section class="category">
+                    <h2>Vælg Drikkevarer</h2>
+                    <div class="menu-items">
+                        <div class="menu-item" data-name="Coca-Cola" data-price="20.00">
+                            <img src="https://www.mcdonalds.com/is/image/content/dam/se/nutrition/nfl-product/product/drinks/Coca-Cola.png" alt="Coca-Cola">
+                            <h3>Coca-Cola</h3><p>20.00 kr.</p><button class="add-to-cart">Tilføj</button>
+                        </div>
+                         <div class="menu-item" data-name="Fanta" data-price="20.00">
+                            <img src="https://www.mcdonalds.com/is/image/content/dam/se/nutrition/nfl-product/product/drinks/Fanta-Orange.png" alt="Fanta">
+                            <h3>Fanta</h3><p>20.00 kr.</p><button class="add-to-cart">Tilføj</button>
+                        </div>
+                    </div>
+                </section>
+                <div class="step-nav">
+                    <button class="prev-step">Tilbage</button>
+                    <button class="next-step skip-step">Spring Over</button>
+                    <button class="next-step">Næste: Dessert</button>
+                </div>
+            </div>
+
+             <div id="step-4" class="step">
+                 <section class="category">
+                    <h2>Vælg Dessert</h2>
+                    <div class="menu-items">
+                        <div class="menu-item" data-name="McFlurry" data-price="28.00">
+                            <img src="https://www.mcdonalds.com/is/image/content/dam/dk/nutrition/nfl-product/product/products/mcflurry_daim_1200x1200.png" alt="McFlurry">
+                            <h3>McFlurry</h3><p>28.00 kr.</p><button class="add-to-cart">Tilføj</button>
+                        </div>
+                    </div>
+                </section>
+                <div class="step-nav">
+                    <button class="prev-step">Tilbage</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cart-container">
+            <h2>Din Bestilling</h2>
+            <ul id="cart-items"></ul>
+            <p class="total">Total: <span id="total-price">0.00</span> kr.</p>
+            <div class="cart-buttons">
+                <button id="complete-order">Gennemfør Køb</button>
+                <button id="cancel-order">Annuller Bestilling</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="receipt-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Din Bestilling er Gennemført!</h2>
+            <div id="receipt-details"></div>
+            <p>Tak for din bestilling. Tryk på krydset for at afslutte.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
