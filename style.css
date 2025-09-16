@@ -158,5 +158,7 @@ button {
 }
 
 .step-nav .next-step {
-    background-color: #1cda3f; /* McDonald's rød */
+    background-color: #1cda3f; /* McDonald's grøn */
+    color: #212529;
+    font-size: medium;
 }
