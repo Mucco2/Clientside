@@ -1,0 +1,63 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #fdfdfd; /* En meget lys og ren baggrund */
+    color: #333;
+    overflow-x: hidden; /* Forhindrer unødvendigt vandret scroll */
+}
+
+/* Hovedcontaineren for "hero"-sektionen */
+.hero {
+    display: flex; /* Aktiverer Flexbox for at placere elementer side om side */
+    align-items: center; /* Centrerer indholdet lodret i sektionen */
+    justify-content: center; /* Centrerer indholdet vandret */
+    min-height: 100vh; /* Giver sektionen fuld skærmhøjde */
+    padding: 2rem; /* Lidt luft omkring indholdet */
+    gap: 4rem; /* Skaber mellemrum mellem knap-sektionen og billed-sektionen */
+}
+
+/* Styler sektionen med knappen */
+.hero-content {
+    flex: 1; /* Giver denne sektion plads til at vokse */
+    display: flex;
+    justify-content: center; /* Centrerer knappen i sin egen kolonne */
+    align-items: center;
+}
+
+/* Styler sektionen med billedet */
+.hero-image {
+    flex: 1; /* Giver også denne sektion plads til at vokse */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styler selve billedet */
+.hero-image img {
+    max-width: 100%; /* Sørger for, at billedet skalerer pænt og ikke bliver for stort */
+    height: auto;
+    border-radius: 25px; /* Giver billedet flotte afrundede hjørner */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12); /* En moderne og blød skygge */
+}
+
+/* Styling af "Call to Action"-knappen */
+.cta-button {
+    /* Farver */
+    background-color: #e4002b; /* En klassisk og kraftig rød farve */
+    color: #ffffff; /* Hvid tekst for maksimal kontrast */
+
+    /* Størrelse og form */
+    padding: 20px 45px;
+    border: none;
+    border-radius: 50px; /* Gør knappen pilleformet */
+
+    /* Tekst */
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase; /* Store bogstaver giver et stærkt udtryk */
+    letter-spacing: 1px;
+
+    /* Effekter */
+    box-shadow: 0 5px 20px rgba(228, 0, 43, 0.4); /* Skygge i knappens egen farve */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Flydende overgange */
+}
