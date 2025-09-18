@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCartDisplay();
     }
 
-    // Fjerner en vare fra kurven, hvis der klikkes på en 'Fjern'-knap.
+    // Fjerner en vare fra kurven, hvis der klikkes på en 'Fjern'-knap. 
     function removeItemFromCart(event) {
         if (event.target.classList.contains('remove-item')) {
             const itemIndex = parseInt(event.target.dataset.index, 10);
